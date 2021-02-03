@@ -75,10 +75,6 @@
   max-width: 560px;
 }
 
-.graph-info img {
-  background-color: red;
-}
-
 .main-text h1 {
   font-size: 3.2rem;
   line-height: 1.2;
@@ -101,6 +97,7 @@ h4 {
 /* Second section, Whats different about Manage? */
 
 .second-section {
+  position: relative;
   display: flex;
 }
 
@@ -288,4 +285,208 @@ footer {
 .marketing i {
   color: white;
   padding: 10px;
+}
+
+.nav-bottom {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+
+  width: 20em;
+}
+
+/* header nav::before {
+  position: absolute;
+  content: "";
+  background: url("./images/bg-tablet-pattern.svg") no-repeat;
+  background-position: left bottom;
+  background-size: 450px;
+  width: 318px;
+  height: 350px;
+  top: -11px;
+  right: ;
+  z-index: -1;
+} */
+.burger {
+  display: none;
+}
+body {
+  background: url("./images/bg-tablet-pattern.svg") no-repeat top -250px right 0px;
+}
+
+.second-section::before {
+  position: absolute;
+  content: "";
+  background: url("./images/bg-tablet-pattern.svg") no-repeat;
+  background-position: left bottom;
+  background-size: 950px;
+  width: 1200px;
+  height: 1200px;
+  top: 150px;
+  left: -850px;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 1480px) {
+  body {
+    font-size: 12px;
+  }
+  .container {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .main-section {
+    flex-direction: column-reverse;
+  }
+  .main-text {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .main-text p {
+    width: 100%;
+  }
+
+  .main-text h1 {
+    font-size: 3em;
+  }
+
+  .graph-info img {
+    max-width: 100%;
+  }
+
+  .users img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .container {
+    position: relative;
+  }
+  .second-section {
+    flex-direction: column;
+  }
+
+  .second-section-left {
+    text-align: center;
+  }
+
+  .second-section-left h3 {
+    font-size: 2.5rem;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .second-section-left p {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  .users {
+    flex-direction: column;
+  }
+
+  .user1,
+  .user2,
+  .user3 {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .rating {
+    margin-bottom: 1em;
+  }
+
+  .text-content {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .text-content h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .footer-flex {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .title nav .list-items {
+    flex-direction: column;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    top: 100px;
+    left: 0;
+    padding: 1.6em 0;
+    z-index: 100;
+    display: none;
+  }
+
+  .list-items .item {
+    margin: 0 0 1.6em 0;
+  }
+
+  .title .cta {
+    display: none;
+  }
+  .burger {
+    display: inline;
+    margin-left: auto;
+    z-index: 100;
+  }
+
+  .burger:hover {
+    cursor: pointer;
+  }
+
+  .title nav .list-items.visible {
+    display: flex;
+  }
+
+  .backdrop {
+    height: 100%;
+    background-color: lightgray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0.5;
+    display: none;
+    z-index: 10;
+  }
+
+  .backdrop.visible {
+    display: block;
+  }
+  .input-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+  }
+
+  .input-search input {
+    padding: 5px;
+    font-size: 10px;
+    width: 80%;
+    height: 30px;
+  }
+
+  .input-search button {
+    padding: 0;
+    height: 30px;
+    width: 30%;
+    margin-left: 5px;
+  }
+  .nav-bottom {
+    margin-bottom: 2rem;
+  }
 }

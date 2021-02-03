@@ -11,6 +11,7 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
     <script
       src="https://kit.fontawesome.com/0f4ecf7998.js"
       crossorigin="anonymous"
@@ -18,9 +19,11 @@
     <title>Frontend Mentor | Manage landing page</title>
   </head>
   <body>
+    <div class="backdrop"></div>
     <div class="container">
       <header class="title">
         <img src="./images/logo.svg" alt="" />
+        <img class="burger" src="./images/icon-hamburger.svg" alt="" />
         <nav>
           <ul class="list-items">
             <li class="item"><a href="#">Pricing</a></li>
@@ -123,7 +126,7 @@
             </p>
           </div>
         </div>
-        <button class="cta">Get Started</button>
+        <button class="cta footer-btn">Get Started</button>
       </div>
     </div>
     <section class="call-to-action">
@@ -168,26 +171,29 @@
             <i class="fab fa-instagram"></i>
           </div>
         </div>
-        <div class="nav-footer">
-          <nav>
-            <ul class="list-items-footer">
-              <li class="item"><a href="#">Home</a></li>
-              <li class="item"><a href="#">Product</a></li>
-              <li class="item"><a href="#">About us</a></li>
-              <li class="item"><a href="#">Careers</a></li>
-              <li class="item"><a href="#">New Products</a></li>
-            </ul>
-          </nav>
+        <div class="nav-bottom">
+          <div class="nav-footer">
+            <nav>
+              <ul class="list-items-footer">
+                <li class="item"><a href="#">Home</a></li>
+                <li class="item"><a href="#">Product</a></li>
+                <li class="item"><a href="#">About us</a></li>
+                <li class="item"><a href="#">Careers</a></li>
+                <li class="item"><a href="#">New Products</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="nav-footer-second">
+            <nav>
+              <ul class="list-items-footer">
+                <li class="item"><a href="#">Pricing</a></li>
+                <li class="item"><a href="#">Privacy Policy</a></li>
+                <li class="item"><a href="#">About us</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
-        <div class="nav-footer-second">
-          <nav>
-            <ul class="list-items-footer">
-              <li class="item"><a href="#">Pricing</a></li>
-              <li class="item"><a href="#">Privacy Policy</a></li>
-              <li class="item"><a href="#">About us</a></li>
-            </ul>
-          </nav>
-        </div>
+
         <div class="search-footer">
           <div class="input-search">
             <input
