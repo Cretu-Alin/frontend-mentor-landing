@@ -15,6 +15,7 @@
       src="https://kit.fontawesome.com/3b9600e3e2.js"
       crossorigin="anonymous"
     ></script>
+    <script src="app.js" defer></script>
     <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
 
@@ -52,19 +53,31 @@
           <img src="./images/illustration-working.svg" alt="" />
         </div>
       </section>
+    </div>
 
-      <div class="statistics">
+    <div class="statistics">
+      <div class="container">
         <div class="form-action">
           <div class="input">
             <form action="">
               <input type="text" placeholder="Input your link here..." />
-              <button class="submit">Shorten It</button>
+              <button class="submit">Shorten It!</button>
             </form>
-            <div class="link">
-              <span class="original-link">Original link</span>
-              <span class="new-link">New link</span>
-              <button class="copy">Copy</button>
-            </div>
+          </div>
+          <div class="link">
+            <span class="original-link">Original link</span>
+            <span class="new-link">New link</span>
+            <button class="submit copy">Copy</button>
+          </div>
+          <div class="link">
+            <span class="original-link">Original link</span>
+            <span class="new-link">New link</span>
+            <button class="submit copy">Copy</button>
+          </div>
+          <div class="link">
+            <span class="original-link">Original link</span>
+            <span class="new-link">New link</span>
+            <button class="submit copy">Copy</button>
           </div>
         </div>
 
@@ -76,8 +89,12 @@
           </p>
         </div>
         <div class="content-box">
-          <div class="box">
-            <img src="./images/icon-brand-recognition.svg" alt="" />
+          <div class="underline"></div>
+          <div class="box box1">
+            <div class="image">
+              <img src="./images/icon-brand-recognition.svg" alt="" />
+            </div>
+
             <h4>Brand Recognition</h4>
             <p>
               Boost your brand recognition with each click. Generic links don’t
@@ -86,8 +103,11 @@
             </p>
           </div>
 
-          <div class="box">
-            <img src="./images/icon-detailed-records.svg" alt="" />
+          <div class="box box2">
+            <div class="image">
+              <img src="./images/icon-detailed-records.svg" alt="" />
+            </div>
+
             <h4>Detailed Records</h4>
             <p>
               Gain insights into who is clicking your links. Knowing when and
@@ -96,8 +116,11 @@
             </p>
           </div>
 
-          <div class="box">
-            <img src="./images/icon-fully-customizable.svg" alt="" />
+          <div class="box box3">
+            <div class="image">
+              <img src="./images/icon-fully-customizable.svg" alt="" />
+            </div>
+
             <h4>Fully Customizable</h4>
             <p>
               Improve brand awareness and content discoverability through
@@ -107,51 +130,53 @@
         </div>
       </div>
     </div>
+
     <div class="footer-cta">
       <h1>Boost your links today</h1>
       <button class="cta-hero">Get Started</button>
     </div>
 
     <footer>
-      <div class="logo">
-        <img src="/images/logo.svg" alt="" />
-      </div>
-      <nav class="main-footer">
-        <ul>
-          <li>Features</li>
-          <li><a href="">Link Shortening</a></li>
-          <li><a href=""> Branded Links</a></li>
-          <li><a href="">Analytics</a></li>
-        </ul>
-        <ul>
-          <li>Resources</li>
-          <li><a href="">Blog</a></li>
-          <li><a href=""> Developers</a></li>
-          <li><a href="">Support </a></li>
-        </ul>
-        <ul>
-          <li>Company</li>
-          <li><a href="">About</a></li>
-          <li><a href=""> Our Team</a></li>
-          <li><a href="">Careers </a></li>
-          <li><a href="">Contact </a></li>
-        </ul>
-      </nav>
+      <div class="container">
+        <img src="./images/logo-white.svg" alt="" class="logo-white" />
 
-      <div class="social">
-        <i class="fab fa-facebook"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-pinterest"></i>
+        <nav class="main-footer">
+          <ul>
+            <li>Features</li>
+            <li><a href="">Link Shortening</a></li>
+            <li><a href=""> Branded Links</a></li>
+            <li><a href="">Analytics</a></li>
+          </ul>
+          <ul>
+            <li>Resources</li>
+            <li><a href="">Blog</a></li>
+            <li><a href=""> Developers</a></li>
+            <li><a href="">Support </a></li>
+          </ul>
+          <ul>
+            <li>Company</li>
+            <li><a href="">About</a></li>
+            <li><a href=""> Our Team</a></li>
+            <li><a href="">Careers </a></li>
+            <li><a href="">Contact </a></li>
+          </ul>
+        </nav>
+
+        <div class="social">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-pinterest"></i>
+        </div>
       </div>
     </footer>
-    Get Started
+    <!-- Get Started -->
 
-    <div class="attribution">
+    <!-- <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+    </div> -->
   </body>
 </html>
