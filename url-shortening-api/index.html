@@ -15,6 +15,7 @@
       src="https://kit.fontawesome.com/3b9600e3e2.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="app.js" defer></script>
     <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
@@ -59,25 +60,41 @@
       <div class="container">
         <div class="form-action">
           <div class="input">
-            <form action="">
+            <form action="" type="submit">
               <input type="text" placeholder="Input your link here..." />
               <button class="submit">Shorten It!</button>
             </form>
           </div>
-          <div class="link">
-            <span class="original-link">Original link</span>
-            <span class="new-link">New link</span>
-            <button class="submit copy">Copy</button>
-          </div>
-          <div class="link">
-            <span class="original-link">Original link</span>
-            <span class="new-link">New link</span>
-            <button class="submit copy">Copy</button>
-          </div>
-          <div class="link">
-            <span class="original-link">Original link</span>
-            <span class="new-link">New link</span>
-            <button class="submit copy">Copy</button>
+          <div class="results">
+            <!-- <p class="loading">Loading . . .</p> -->
+            <div class="loading">
+              <div class="lds-roller">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+
+            <!-- <div class="link">
+              <span class="original-link">Original link</span>
+              <span class="new-link">New link</span>
+              <button class="submit copy">Copy</button>
+            </div>
+            <div class="link">
+              <span class="original-link">Original link</span>
+              <span class="new-link">New link</span>
+              <button class="submit copy">Copy</button>
+            </div>
+            <div class="link">
+              <span class="original-link">Original link</span>
+              <span class="new-link">New link</span>
+              <button class="submit copy">Copy</button>
+            </div> -->
           </div>
         </div>
 
