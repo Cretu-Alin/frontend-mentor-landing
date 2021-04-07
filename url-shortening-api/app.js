@@ -9,13 +9,15 @@ const getInputData = (e) => {
   e.preventDefault();
   const value = input.value;
   console.log(value);
+  let regex = /(http|https):\/\/(\w+:{0,1}\w*)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/;
 
-  if (!value) {
+  if (!value || !regex.test(value)) {
     input.classList.add("warning");
 
     return;
   }
   input.classList.remove("warning");
+  input.value = "";
   getData(value);
 };
 
