@@ -2,6 +2,9 @@ const input = document.querySelector("input");
 const submitBtn = document.querySelector("submit");
 const form = document.querySelector("form");
 const loadingText = document.querySelector(".loading");
+const menuBtn = document.querySelector(".menu-btn");
+const nav = document.querySelector(".navigation-container");
+let menuOpen = false;
 
 let isLoading = true;
 
@@ -13,11 +16,12 @@ const getInputData = (e) => {
 
   if (!value || !regex.test(value)) {
     input.classList.add("warning");
-
+    input.setAttribute("placeholder", "Please enter a valid link...");
     return;
   }
   input.classList.remove("warning");
   input.value = "";
+  input.setAttribute("placeholder", "Shorten your link here...");
   getData(value);
 };
 
@@ -78,3 +82,16 @@ const handleCopy = (e) => {
   }
 };
 document.addEventListener("click", handleCopy);
+
+menuBtn.addEventListener("click", () => {
+  if (!menuOpen) {
+    menuBtn.classList.add("open");
+    nav.style.display = "flex";
+    menuOpen = true;
+  } else {
+    menuBtn.classList.remove("open");
+    menuOpen = false;
+  }
+
+  ////////
+});
