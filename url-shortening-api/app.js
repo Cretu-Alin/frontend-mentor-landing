@@ -90,6 +90,7 @@ menuBtn.addEventListener("click", () => {
     menuOpen = true;
   } else {
     menuBtn.classList.remove("open");
+    nav.style.display = "none";
     menuOpen = false;
   }
 

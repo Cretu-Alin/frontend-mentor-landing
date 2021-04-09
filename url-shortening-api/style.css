@@ -7,6 +7,9 @@
   font-family: "Poppins", sans-serif;
   font-size: 18px;
 }
+button:focus {
+  outline: none;
+}
 
 /* Header configuration */
 
@@ -109,17 +112,19 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 16rem;
-  border: 1px solid red;
 }
 
 .logo nav ul li {
   list-style: none;
-  border: 1px solid white;
 }
 
 .logo nav ul li a {
   text-decoration: none;
   color: hsl(0, 0%, 65%);
+}
+
+.logo nav ul li a:hover {
+  color: hsl(255, 11%, 22%);
 }
 
 /* Container width 80% */
@@ -141,6 +146,7 @@ header {
 .title {
   font-size: 4rem;
   line-height: 1.2;
+  color: hsl(255, 11%, 22%);
 }
 
 .info p {
@@ -155,6 +161,11 @@ header {
   width: 10em;
   margin-top: 2em;
   border-radius: 3rem;
+  cursor: pointer;
+}
+
+.cta-hero:hover {
+  background-color: hsl(180, 65%, 65%);
 }
 
 .login {
@@ -163,6 +174,11 @@ header {
   background-color: inherit;
   margin-right: 1.5rem;
   color: hsl(0, 0%, 65%);
+  cursor: pointer;
+}
+
+.login:hover {
+  color: hsl(255, 11%, 22%);
 }
 
 .signup {
@@ -170,9 +186,12 @@ header {
   padding: 0.3em 1em;
   background-color: hsl(180, 66%, 49%);
   color: white;
-  /* width: 10em; */
-
+  cursor: pointer;
   border-radius: 3rem;
+}
+
+.signup:hover {
+  background-color: hsl(180, 65%, 65%);
 }
 
 .submit {
@@ -183,8 +202,11 @@ header {
   /* width: 8em; */
   width: 13%;
   margin-left: 1em;
-
   border-radius: 0.5rem;
+  cursor: pointer;
+}
+.submit:hover {
+  background-color: hsl(180, 65%, 65%);
 }
 
 /* Form Action styling */
@@ -318,6 +340,10 @@ input {
 .copied {
   background-color: rgb(68, 38, 68);
 }
+
+.copied:hover {
+  background-color: rgb(143, 101, 143);
+}
 /* footer call to action */
 
 .footer-cta {
@@ -374,6 +400,11 @@ footer .container {
   color: hsl(0, 0%, 75%);
   text-decoration: none;
   font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.main-footer ul a:hover {
+  color: hsl(180, 95%, 78%);
 }
 
 .main-footer ul li:first-child {
@@ -383,6 +414,11 @@ footer .container {
 .social i {
   font-size: 1.7rem;
   padding: 0rem 1.7rem;
+  cursor: pointer;
+}
+
+.social i:hover {
+  color: hsl(180, 95%, 78%);
 }
 
 /* Loading animation */
@@ -583,17 +619,29 @@ footer .container {
     background-color: hsl(257, 27%, 26%);
     display: flex;
     flex-direction: column;
-
+    display: none;
     top: 80%;
     /* padding: 2rem;*/
-    margin-top: 2rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
   }
 
   .navigation-container ul {
+    margin-top: 1.5rem;
     flex-direction: column;
   }
 
   .navigation-container ul li {
+    margin-bottom: 1.5rem;
+  }
+
+  .navigation-container nav ul li a {
+    font-weight: bold;
+    color: white;
+  }
+
+  .navigation-container nav ul li a:hover {
+    color: rgb(47, 228, 228);
   }
 
   .btn-hero {
@@ -602,15 +650,79 @@ footer .container {
     align-items: center;
     width: 16rem;
     justify-content: center;
+    border-top: 1px solid white;
+  }
+
+  .btn-hero button {
+    font-weight: bold;
+    color: white;
   }
 
   .login {
     margin-right: 0;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .login:hover {
+    color: rgb(47, 228, 228);
+  }
+
+  .signup {
+    margin-bottom: 1.5rem;
+    width: 10rem;
   }
 
   .menu-btn {
     display: flex;
     justify-content: center;
+  }
+
+  footer .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-footer {
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    width: 80%;
+  }
+
+  .logo-white {
+    margin: 0;
+  }
+  .main-footer li {
+    margin: 0;
+  }
+
+  .link {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .link .new-link {
+    border-top: 1px solid rgb(68, 38, 68);
+    width: 100%;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    padding-top: 0.5rem;
+  }
+
+  .original-link {
+    margin-bottom: 0.5rem;
+  }
+
+  .results {
+    padding-top: 8rem;
+  }
+
+  .original-link {
+    display: inline-block;
+    max-width: 40%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
@@ -618,7 +730,7 @@ footer .container {
 
 @media only screen and (max-width: 1000px) {
   .navigation-container {
-    display: none;
+    /* display: none; */
   }
 
   .menu-btn {
@@ -627,5 +739,34 @@ footer .container {
 
   .title {
     font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  .main-footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-footer ul {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .social {
+    text-align: center;
+  }
+
+  .social i {
+    padding: 0.5rem;
+  }
+  .footer-cta h1 {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .underline {
+    width: 920px;
   }
 }
