@@ -1,5 +1,8 @@
 # Frontend Mentor - Manage landing page
 
+View live demo here: https://landing-page-zeta-one.vercel.app/
+
+
 ![Design preview for the Manage landing page coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
