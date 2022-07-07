@@ -1,6 +1,6 @@
 # Frontend Mentor - Shortly URL shortening API Challenge
 
-View demo here: https://url-shortening-omega.vercel.app/
+View demo here: https://url-shortening-frontend-ac.vercel.app/
 
 ![Design preview for the Shortly URL shortening API coding challenge](./design/desktop-preview.jpg)
 
